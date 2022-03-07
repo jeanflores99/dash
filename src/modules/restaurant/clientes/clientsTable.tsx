@@ -5,7 +5,10 @@ import { Clients } from '@common/tables/dto/clients'
 import { IClientes } from '@common/tables/interface/client'
 import DataTable from 'react-data-table-component';
 
-const ClientsTable = () => {
+interface Iprops {
+  onClick: (client: IClientes) => void
+}
+const ClientsTable = ({ onClick }: Iprops) => {
 
   const columns = useMemo(() => {
     return [
@@ -35,7 +38,7 @@ const ClientsTable = () => {
           <>
             <Edit3 className="cursor-pointer"
               // onClick={() => onClick?.show(row)}
-              onClick={() => { }}
+              onClick={() => onClick(row)}
 
             />
             <XCircle className="cursor-pointer " style={{ marginLeft: '6px' }}

@@ -26,11 +26,11 @@ const SignInPage: NextPage = () => {
       <Container fluid={true}>
         <Row>
           <Show condition={showBackgroud}>
-            <Col md="6" lg="7" xl="5" className={styles.without_padding}>
+            {/* <Col md="6" lg="7" xl="5" className={styles.without_padding}>
               <div className={styles.login__background} />
-            </Col>
+            </Col> */}
           </Show>
-          <Col xl="7" className="p-0">
+          <Col xl="12" className="p-0">
             <div className="login-card">
               <div>
                 <div className={styles.login__icon}>
@@ -40,7 +40,7 @@ const SignInPage: NextPage = () => {
                 </div>
                 <LoginForm
                   onResetPassword={() => alert('has')}
-                  onSignIn={() => router.push('/')}
+                  onSignIn={() => router.push('/restaurant/reports')}
                 />
               </div>
             </div>
@@ -53,4 +53,4 @@ const SignInPage: NextPage = () => {
 
 export default SignInPage;
 
-export const getServerSideProps = guest("Sign-in");
+export const getServerSideProps = guest("Home");

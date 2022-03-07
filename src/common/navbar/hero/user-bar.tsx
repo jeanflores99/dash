@@ -52,7 +52,7 @@ export const UserBar = () => {
           src={UserDefault}
         />
         <div className="media-body">
-          <span>{user?.username || 'Jean'}</span>
+          <span>{'Jean'}</span>
           <p className="mb-0 font-roboto">
             {user?.role?.name || 'User'} <i className="middle fa fa-angle-down"></i>
           </p>

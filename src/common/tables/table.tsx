@@ -2,6 +2,9 @@ import React, { useMemo } from 'react'
 import DataTable from 'react-data-table-component'
 import { IMesaDetails } from './interface/mesaDetails'
 import { Edit3, XCircle } from 'react-feather'
+import { Col, Row } from 'reactstrap'
+import Toggle from '@atlaskit/toggle';
+// import Toogle from ''
 
 interface Iprops {
   data: IMesaDetails[]
@@ -74,7 +77,15 @@ const TableDetails = ({ data }: Iprops) => {
   return (
     <>
       {/* <h5>Pedidos registados </h5> */}
-      <span className='badge badge-info mb-1'>Pedidos registrados</span>
+      <Row>
+        <Col md='9'>
+          <span className='badge badge-info mb-1'>Pedidos registrados</span>
+        </Col>
+        <Col md='3'>
+          <span className='fluid badge  mb-1 '>
+            ¿Delivery? <Toggle /></span>
+        </Col>
+      </Row>
       <DataTable
         data={data}
         columns={columns as any}
