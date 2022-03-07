@@ -1,0 +1,14 @@
+
+$secundary-transparent: rgba(247, 49, 100, 0.15);
+
+.btn-float {
+  border-radius:100%;
+  background: red;
+  right: 15px;
+  bottom: 15px;
+  position:fixed;
+  border:none;
+  outline:none;
+  width: 40px;
+  height: 40px;
+}
